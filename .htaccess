@@ -1,0 +1,18 @@
+# Abilita CORS per tutte le origini
+Header set Access-Control-Allow-Origin "*"
+
+# Abilita metodi specifici (GET, POST, PUT, DELETE, ecc.)
+Header set Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS"
+
+# Abilita headers specifici (ad esempio Content-Type)
+Header set Access-Control-Allow-Headers "Content-Type, Authorization"
+
+# Permetti le richieste preflight con il metodo OPTIONS (utile per le richieste con metodi complessi)
+Header set Access-Control-Allow-Credentials "true"
+
+# Impostazioni per le richieste preflight (metodo OPTIONS)
+<IfModule mod_headers.c>
+  <FilesMatch "\.(html|js|css|json)$">
+    Header always set Access-Control-Allow-Origin "*"
+  </FilesMatch>
+</IfModule>

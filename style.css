@@ -1,0 +1,161 @@
+@font-face {
+  font-family: "digital";
+  src: url("font/DS-DIGI.TTF") format("truetype");
+}
+
+body {
+  font-family: "digital", sans-serif;
+  background: #111;
+  padding: 40px;
+  color: #f2c90a;
+  overflow-x: hidden;
+}
+
+.audio-player {
+  width: 100%;
+  border-radius: 0px;
+  padding: 5px;
+  font-family: "digital", sans-serif;
+}
+
+.audio-player {
+  width: 400px;
+  margin: 20px;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.controls img {
+  cursor: pointer;
+  width: 35px;
+}
+
+.controls-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.progress {
+  height: 15px;
+  background-color: #665;
+  margin-top: 10px;
+}
+
+.progress-bar {
+  width: 0;
+  height: 100%;
+  background-color: #f2c90a;
+}
+
+#current-time,
+#total-time {
+  margin-top: 10px;
+}
+
+#volume-control {
+  width: 300px;
+  margin: 20px;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 7px;
+  background: #665;
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  background: #f2c90a;
+  cursor: pointer;
+  margin-top: -1px;
+  border: 2px solid #111;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  background: #f2c90a;
+  cursor: pointer;
+}
+
+#playlist {
+  font-size: 28px;
+  padding: 0;
+  margin: 0;
+  padding: 30px;
+  margin-top: 10px;
+}
+
+#playlist li {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+#playlist li:hover {
+  color: #c1a316;
+}
+
+.time-container {
+  display: flex;
+  justify-content: space-between;
+  font-size: 34px;
+}
+
+#volume-control-container {
+  margin-left: -10px;
+}
+
+.overlay {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+.modal {
+  width: 70%;
+  height: 70%;
+  background: #111;
+  z-index: 20;
+  position: fixed;
+  padding: 40px;
+  font-size: 19px;
+  line-height: 30px;
+}
+
+.modal b {
+  font-size: 24px;
+}
+
+#close-button {
+  cursor: pointer;
+  width: 35px;
+  float: right;
+}
+
+img {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+img:hover {
+  opacity: 0.8;
+}
