@@ -13,78 +13,94 @@ const playlistContainer = document.getElementById("playlist-container");
 
 let isPlaying = false;
 
-
 playButton.addEventListener("click", () => {
-    audioPlayer.play();
-    isPlaying = true;
+  audioPlayer.play();
+  isPlaying = true;
 });
 
 pauseButton.addEventListener("click", () => {
-    audioPlayer.pause();
-    isPlaying = false;
+  audioPlayer.pause();
+  isPlaying = false;
 });
 
 stopButton.addEventListener("click", () => {
-    audioPlayer.pause();
-    isPlaying = false;
+  audioPlayer.pause();
+  isPlaying = false;
 });
 
 infoControl.addEventListener("click", () => {
-    overlay.style.display = "flex";
+  overlay.style.display = "flex";
 });
 
 closeButton.addEventListener("click", () => {
-    overlay.style.display = "none";
+  overlay.style.display = "none";
 });
 
 volumeControl.addEventListener("input", () => {
-    audioPlayer.volume = volumeControl.value;
+  audioPlayer.volume = volumeControl.value;
 });
 
 audioPlayer.addEventListener("timeupdate", () => {
-    const currentTime = audioPlayer.currentTime;
-    const duration = audioPlayer.duration;
+  const currentTime = audioPlayer.currentTime;
+  const duration = audioPlayer.duration;
 
-    const currentMinutes = Math.floor(currentTime / 60);
-    const currentSeconds = Math.floor(currentTime % 60);
-    const totalMinutes = Math.floor(duration / 60);
-    const totalSeconds = Math.floor(duration % 60);
+  const currentMinutes = Math.floor(currentTime / 60);
+  const currentSeconds = Math.floor(currentTime % 60);
+  const totalMinutes = Math.floor(duration / 60);
+  const totalSeconds = Math.floor(duration % 60);
 
-    currentTimeDisplay.textContent = `${currentMinutes}:${currentSeconds < 10 ? '0' : ''}${currentSeconds}`;
-    totalTimeDisplay.textContent = `${totalMinutes}:${totalSeconds < 10 ? '0' : ''}${totalSeconds}`;
+  currentTimeDisplay.textContent = `${currentMinutes}:${
+    currentSeconds < 10 ? "0" : ""
+  }${currentSeconds}`;
+  totalTimeDisplay.textContent = `${totalMinutes}:${
+    totalSeconds < 10 ? "0" : ""
+  }${totalSeconds}`;
 
-    const progress = (currentTime / duration) * 100;
-    progressBar.style.width = `${progress}%`;
+  const progress = (currentTime / duration) * 100;
+  progressBar.style.width = `${progress}%`;
 });
 
 async function loadPlaylist() {
-    try {
-        const response = await fetch('playlist.json');
-        const playlist = await response.json();
+  try {
+    const response = await fetch("playlist.json");
+    const playlist = await response.json();
 
-        const olElement = document.createElement('ol');
-        olElement.id = 'playlist';
-        playlistContainer.appendChild(olElement);
+    const olElement = document.createElement("ol");
+    olElement.id = "playlist";
+    playlistContainer.appendChild(olElement);
 
-        playlist.forEach((track) => {
-            const liElement = document.createElement('li');
-            liElement.textContent = track.title;
-            liElement.setAttribute('data-src', track.url);
-            olElement.appendChild(liElement);
+    playlist.forEach((track, index) => {
+      const liElement = document.createElement("li");
+      liElement.innerHTML = `<div class='playlist-row'> <div class='playlist-content'><div class='playlist-number'>${
+        index + 1
+      }.</div><div>${track.title}</div></div><div>${track.time}</div></div>`;
+      liElement.setAttribute("data-src", track.url);
+      olElement.appendChild(liElement);
+    });
+
+    const tracks = olElement.querySelectorAll("li");
+    tracks.forEach((track) => {
+      track.addEventListener("click", () => {
+        tracks.forEach((t) => {
+          t.style.color = "#f2c90a";
         });
+        const src = track.getAttribute("data-src");
+        audioPlayer.src = src;
+        audioPlayer.play();
+        track.style.color = "#c1a316";
+      });
 
-        const tracks = olElement.querySelectorAll('li');
-        tracks.forEach(track => {
-            track.addEventListener('click', () => {
-                const src = track.getAttribute('data-src');
-                audioPlayer.src = src;
-                audioPlayer.play();
-                track.style.color = "#c1a316";
-            });
-        });
-    } catch (error) {
-        console.error('Error loading playlist:', error);
-    }
+      const itemsPerColumn = Math.ceil(playlist.length / 2);
+      tracks.forEach((item, index) => {
+        const row = (index % itemsPerColumn) + 1;
+        const column = index < itemsPerColumn ? 1 : 2;
+        item.style.gridRow = row;
+        item.style.gridColumn = column;
+      });
+    });
+  } catch (error) {
+    console.error("Error loading playlist:", error);
+  }
 }
 
 loadPlaylist();

@@ -1,5 +1,43 @@
 [
-    { "title": "Track 1", "url": "audio/audio1.mp3" },
-    { "title": "Track 2", "url": "audio/audio2.mp3" },
-    { "title": "Track 3", "url": "audio/audio3.mp3" }
-  ]
+  {
+    "title": "Coding session",
+    "url": "audio/Coding session.mp3",
+    "time": "4:00"
+  },
+  {
+    "title": "Digital chaos",
+    "url": "audio/Digital chaos.mp3",
+    "time": "4:00"
+  },
+  {
+    "title": "Digital dominance",
+    "url": "audio/Digital dominance.mp3",
+    "time": "2:51"
+  },
+  {
+    "title": "Electric sunrise",
+    "url": "audio/Electric sunrise.mp3",
+    "time": "3:08"
+  },
+  { "title": "Nostalgia", "url": "audio/Nostalgia.mp3", "time": "4:00" },
+  {
+    "title": "Stack overflow",
+    "url": "audio/Stack overflow.mp3",
+    "time": "4:00"
+  },
+  {
+    "title": "Sunday morning",
+    "url": "audio/Sunday morning.mp3",
+    "time": "2:52"
+  },
+  {
+    "title": "Unleashed idea",
+    "url": "audio/Unleashed idea.mp3",
+    "time": "2:19"
+  },
+  {
+    "title": "Vengeance in the shadows",
+    "url": "audio/Vengeance in the shadows.mp3",
+    "time": "1:58"
+  }
+]
