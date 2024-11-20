@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Audio player - davidebalice.dev</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="style.css?d=1" />
   </head>
   <body>
     <div class="audio-player-container">
@@ -12,7 +12,7 @@
         class="audio-player"
         style="display: none"
       >
-        <source src="audio/audio1.mp3" type="audio/mpeg" />
+        <source src="audio/Coding session.mp3" type="audio/mpeg" />
       </audio>
       <div class="controls">
         <div class="controls-buttons">
@@ -41,11 +41,12 @@
           </a>
         </div>
       </div>
-      <div class="progress">
+      <div class="progress" id="progress">
         <div class="progress-bar" id="progress-bar"></div>
       </div>
       <div class="time-container">
         <div id="current-time">0:00</div>
+        <div id="current-track"></div>
         <div id="total-time">0:00</div>
       </div>
     </div>
