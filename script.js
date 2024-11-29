@@ -16,6 +16,12 @@ let currentTrackIndex = 0;
 let isPlaying = false;
 let tracks = [];
 
+function isMobile() {
+  return /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+    navigator.userAgent
+  );
+}
+
 playButton.addEventListener("click", () => {
   audioPlayer.play();
   isPlaying = true;
@@ -101,14 +107,20 @@ async function loadPlaylist() {
         currentTrack.innerText = trackTitle;
       });
 
-      const itemsPerColumn = Math.ceil(playlist.length / 2);
-      tracks.forEach((item, index) => {
-        const row = (index % itemsPerColumn) + 1;
-        const column = index < itemsPerColumn ? 1 : 2;
-        item.style.gridRow = row;
-        item.style.gridColumn = column;
-        currentTrackIndex = index;
-      });
+      if (!isMobile()) {
+        const itemsPerColumn = Math.ceil(playlist.length / 2);
+        tracks.forEach((item, index) => {
+          const row = (index % itemsPerColumn) + 1;
+          const column = index < itemsPerColumn ? 1 : 2;
+          item.style.gridRow = row;
+          item.style.gridColumn = column;
+          currentTrackIndex = index;
+        });
+      } else {
+        tracks.forEach((item, index) => {
+          item.style.display = "block";
+        });
+      }
     });
   } catch (error) {
     console.error("Error loading playlist:", error);

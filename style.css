@@ -7,6 +7,10 @@
   src: url("font/Pixeled.ttf") format("truetype");
 }
 
+html {
+  width: 100%;
+}
+
 body {
   font-family: "minecraft", sans-serif;
   background: #111;
@@ -27,6 +31,7 @@ body {
 
 .audio-player {
   width: 400px;
+  border: 1px solid red;
   margin: 20px;
 }
 
@@ -40,7 +45,7 @@ body {
 
 .controls img {
   cursor: pointer;
-  width: 35px;
+  width: 52px;
 }
 
 .controls-buttons {
@@ -50,7 +55,7 @@ body {
 }
 
 .progress {
-  height: 15px;
+  height: 22px;
   background-color: #665;
   margin-top: 10px;
 }
@@ -210,27 +215,30 @@ img:hover {
   margin-top: 8px;
 }
 
-@media (max-width: 900px) {
+.buttons-spacer {
+  display: none;
+}
+
+@media screen and (max-width: 999px) {
   body {
     padding: 30px;
-    width: 700px;
+    width: 90% !important;
+    margin: 0 auto;
     font-family: "minecraft", sans-serif;
   }
-  #playlist {
-    font-size: 10px;
-    padding: 0;
-    margin: 0;
-    margin-top: 30px;
-  }
+
   .time-container {
     font-size: 21px;
   }
+
   .controls-buttons {
     gap: 4px;
   }
+
   #github-button {
     margin-top: 8px;
   }
+
   #current-track {
     font-size: 14px;
   }
@@ -245,5 +253,86 @@ img:hover {
 
   .modal b {
     font-size: 16px;
+  }
+
+  #playlist {
+    list-style: none;
+    padding: 0;
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+    margin-top: 30px;
+    display: block !important;
+  }
+
+  #playlist li {
+    margin-bottom: 10px;
+    cursor: pointer;
+    grid-column: auto !important;
+  }
+
+  #playlist li:nth-child(odd) {
+    grid-column: 1 !important;
+  }
+
+  #playlist li:nth-child(even) {
+    grid-column: 1;
+  }
+
+  .playlist-row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #playlist li {
+    display: block !important;
+    grid-column: 1 !important;
+  }
+
+  #volume-control {
+    width: 200%;
+    margin: 20px;
+  }
+
+  #volume-control-container {
+    margin-left: 0px;
+    width: 50%;
+    margin-top: 4px;
+    float: left;
+  }
+
+  .controls-buttons {
+    display: block;
+    align-items: center;
+    gap: 10px;
+    clear: both;
+  }
+
+  .controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+
+  .progress {
+    max-width: 100%;
+  }
+
+  .controls-buttons-right {
+    margin-top: -80px;
+    width: 130px !important;
+    text-align: right;
+  }
+
+  #volume-button {
+    float: left;
+  }
+
+  .buttons-spacer {
+    clear: both;
+    display: block;
+    height: 22px;
   }
 }
