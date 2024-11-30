@@ -17,10 +17,9 @@ html {
 }
 
 body {
-  font-family: "play", sans-serif;
-  background: url("img/bg.jpg") no-repeat;
-  background-size: cover;
-  color: #333;
+  font-family: "minecraft", sans-serif;
+  background: #111;
+  color: #f2c90a;
   overflow-x: hidden;
   width: 100%;
   height: 100%;
@@ -31,29 +30,7 @@ body {
   width: 100%;
   height: 60px;
   background-color: #fff;
-  box-shadow: 0px 3px 6px 0px rgb(0, 0, 0, 0.26);
-}
-
-button {
-  border: 1px solid #ddd;
-  margin-right: 10px;
-  display: flex;
-  color: #fff;
-  align-items: center;
-  padding: 3px 10px;
-  gap: 6px;
-  text-align: left;
-  background: #000000;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-button img {
-  width: 28px;
-}
-
-button:hover {
-  transform: scale(1.1);
+  box-shadow: 0px 3px 6px 0px rgb(0, 0, 0, 0.16);
 }
 
 .header-int {
@@ -102,6 +79,29 @@ button:hover {
   font-family: "minecraft";
 }
 
+button {
+  margin-right: 10px;
+  font-family: "minecraft", sans-serif;
+  display: flex;
+  color: #fff;
+  align-items: center;
+  padding: 3px 10px;
+  gap: 6px;
+  font-size: 10px;
+  text-align: left;
+  background: #665;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+button img {
+  width: 28px;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
 .main {
   max-width: 1000px;
   padding: 40px;
@@ -118,6 +118,12 @@ button:hover {
 .audio-player {
   width: 400px;
   margin: 20px;
+}
+
+.pixelate {
+  height: auto;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
 }
 
 .controls {
@@ -144,6 +150,12 @@ button:hover {
   gap: 10px;
 }
 
+.controls-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .progress {
   height: 22px;
   background-color: #665;
@@ -153,7 +165,7 @@ button:hover {
 .progress-bar {
   width: 0;
   height: 100%;
-  background-color: #19a8cf;
+  background-color: #f2c90a;
 }
 
 #current-time,
@@ -184,7 +196,7 @@ input[type="range"]::-webkit-slider-thumb {
   appearance: none;
   width: 18px;
   height: 18px;
-  background: #19a8cf;
+  background: #f2c90a;
   cursor: pointer;
   margin-top: -1px;
   border: 2px solid #111;
@@ -193,7 +205,7 @@ input[type="range"]::-webkit-slider-thumb {
 input[type="range"]::-moz-range-thumb {
   width: 18px;
   height: 18px;
-  background: #19a8cf;
+  background: #f2c90a;
   cursor: pointer;
 }
 
@@ -201,7 +213,7 @@ input[type="range"]::-moz-range-thumb {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 35px;
+  font-size: 22px;
 }
 
 #volume-control-container {
@@ -225,11 +237,11 @@ input[type="range"]::-moz-range-thumb {
 .modal {
   width: 70%;
   height: 70%;
-  background: #fff;
+  background: #111;
   z-index: 20;
   position: fixed;
   padding: 40px;
-  font-size: 18px;
+  font-size: 15px;
   line-height: 30px;
 }
 
@@ -243,7 +255,7 @@ input[type="range"]::-moz-range-thumb {
 
 #close-button {
   cursor: pointer;
-  width: 45px;
+  width: 35px;
   float: right;
 }
 
@@ -265,7 +277,7 @@ img:hover {
   list-style: none;
   counter-reset: list-counter;
   padding: 0;
-  font-size: 25px;
+  font-size: 15px;
   padding: 0;
   margin: 0;
   margin-top: 50px;
@@ -285,7 +297,7 @@ img:hover {
 }
 
 #playlist li:hover {
-  color: #0a8eb3;
+  color: #c1a316;
 }
 
 .playlist-row {
@@ -299,8 +311,8 @@ img:hover {
 }
 
 #current-track {
-  font-size: 21px;
-  margin-top: 10px;
+  font-size: 20px;
+  margin-top: 3px;
 }
 
 #github-button {
@@ -341,6 +353,9 @@ img:hover {
 
 .track-cover {
   min-height: 282px;
+
+  filter: grayscale(1);
+  transform-origin: center;
 }
 
 #prev-track {
@@ -355,7 +370,7 @@ img:hover {
 
 #cover-title {
   margin-top: 2px;
-  font-size: 25px;
+  font-size: 15px;
   height: 70px;
   overflow: hidden;
   display: flex;
@@ -375,6 +390,8 @@ img:hover {
   width: 75px !important;
   margin: 0 auto;
   margin-top: 10px;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
 }
 
 @media screen and (max-width: 999px) {
@@ -419,7 +436,7 @@ img:hover {
   #playlist {
     list-style: none;
     padding: 0;
-    font-size: 21px;
+    font-size: 16px;
     padding: 0;
     margin: 0;
     margin-top: 30px;
@@ -456,8 +473,8 @@ img:hover {
   }
 
   #volume-control-container {
-    margin-left: -10px;
-    width: 60%;
+    margin-left: 0px;
+    width: 50%;
     margin-top: 4px;
     float: left;
   }
@@ -482,53 +499,18 @@ img:hover {
   }
 
   .controls-buttons-right {
-    margin-top: -32px;
+    margin-top: -80px;
     width: 130px !important;
     text-align: right;
+  }
+
+  #volume-button {
+    float: left;
   }
 
   .buttons-spacer {
     clear: both;
     display: block;
     height: 22px;
-  }
-
-  #cover-image-container img {
-    width: 100%;
-    max-width: 400px;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-  }
-
-  .track-cover {
-    min-height: 100px;
-  }
-
-  #prev-track {
-    width: 25%;
-    text-align: right;
-  }
-
-  #cover-image-container {
-    width: 50%;
-    text-align: center;
-  }
-
-  #cover-title {
-    margin-top: 2px;
-    font-size: 16px;
-    height: 60px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #665;
-    color: #fff;
-    border-radius: 8px;
-  }
-
-  #next-track {
-    width: 25%;
-    text-align: left;
   }
 }

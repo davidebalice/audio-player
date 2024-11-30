@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Audio player - davidebalice.dev</title>
-    <link rel="stylesheet" type="text/css" href="style.css?d=6" />
+    <link rel="stylesheet" type="text/css" href="style2.css?d=6" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
@@ -31,10 +31,10 @@
         </audio>
         <div class="controls">
           <div class="controls-buttons">
-            <img src="img/play2.png" id="play-button" />
-            <img src="img/pause2.png" id="pause-button" />
-            <img src="img/stop2.png" id="stop-button" />
-            <img src="img/volume2.png" id="volume-button" />
+            <img src="img/play.png" id="play-button" />
+            <img src="img/pause.png" id="pause-button" />
+            <img src="img/stop.png" id="stop-button" />
+            <img src="img/volume.png" id="volume-button" />
             <div class="buttons-spacer"></div>
             <div id="volume-control-container">
               <input
@@ -48,12 +48,12 @@
             </div>
           </div>
           <div class="controls-buttons controls-buttons-right">
-            <img src="img/info2.png" id="info-button" />
+            <img src="img/info.png" id="info-button" />
             <a
               href="https://github.com/davidebalice/audio-player"
               target="_blank"
             >
-              <img src="img/github2.png" id="github-button" />
+              <img src="img/github.png" id="github-button" />
             </a>
           </div>
         </div>
@@ -69,24 +69,24 @@
 
       <div id="tab-container">
         <button id="playlist-button">
-          <img src="img/playlist2.png" />
+          <img src="img/playlist.png" class="pixelate" />
           playlist
         </button>
         <button id="cover-button">
-          <img src="img/cover2.png" />
+          <img src="img/cover.png" class="pixelate" />
           cover
         </button>
       </div>
       <div id="playlist-container"></div>
       <div id="cover-container">
-        <div id="prev-track"><img src="img/prev2.png" /></div>
+        <div id="prev-track"><img src="img/prev.png" /></div>
         <div id="cover-image-container"></div>
-        <div id="next-track"><img src="img/next2.png" /></div>
+        <div id="next-track"><img src="img/next.png" /></div>
       </div>
 
       <div class="overlay" id="overlay">
         <div class="modal">
-          <img src="img/close2.png" id="close-button" />
+          <img src="img/close.png" id="close-button" />
           <p>
             <b>Audio player developed in Javascript</b>
             <br /><br />
@@ -108,10 +108,9 @@
         </div>
       </div>
     </div>
-    <input type="hidden" id="style" value="1" />
-    <input type="hidden" id="color-primary" value="#333333" />
-    <input type="hidden" id="color-secondary" value="#0a8eb3" />
-
+    <input type="hidden" id="style" value="2" />
+    <input type="hidden" id="color-primary" value="#f2c90a" />
+    <input type="hidden" id="color-secondary" value="#c1a316" />
     <script src="script.js"></script>
   </body>
 </html>
