@@ -172,7 +172,7 @@ async function loadCover() {
       }
 
       const title = currentTrackData.title;
-      coverImageContainer.innerHTML = `<img src="${coverImage}" alt="Cover" class="track-cover" /><div id="cover-title">${title}</div><img src="${playButton.src}" id="cover-play">`;
+      coverImageContainer.innerHTML = `<img src="${coverImage}" alt="Cover" class="track-cover"  id="cover-img"/><div id="cover-title">${title}</div><img src="${playButton.src}" id="cover-play">`;
     }
 
     const coverPlay = document.getElementById("cover-play");
@@ -261,19 +261,6 @@ coverButton.addEventListener("click", (event) => {
 });
 
 loadPlaylist().then(() => {
-  loadCover();
+  loadCover().then(() => {
+  });
 });
-
-/*
-<canvas id="pixel-canvas" width="400" height="400"></canvas>
-<img id="source-image" src="image-40px.jpg" style="display: none;" />
-const canvas = document.getElementById("pixel-canvas");
-const ctx = canvas.getContext("2d");
-const img = document.getElementById("source-image");
-
-img.onload = () => {
-  // Disegna l'immagine originale di 40x40 pixel
-  ctx.imageSmoothingEnabled = false; // Disattiva lo smoothing
-  ctx.drawImage(img, 0, 0, 40, 40, 0, 0, 400, 400); // Scala a 400x400
-};
-*/

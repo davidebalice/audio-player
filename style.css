@@ -1,5 +1,5 @@
 @font-face {
-  font-family: "play";
+  font-family: "Play";
   src: url("font/play.ttf") format("truetype");
 }
 
@@ -17,7 +17,7 @@ html {
 }
 
 body {
-  font-family: "play", sans-serif;
+  font-family: "Play", sans-serif;
   background: url("img/bg.jpg") no-repeat;
   background-size: cover;
   color: #333;
@@ -91,7 +91,7 @@ button:hover {
   margin-left: 12px;
   font-size: 18px;
   background: #000;
-  font-family: "play";
+  font-family: "Play";
 }
 
 .header-int a:nth-child(2) {
@@ -112,7 +112,7 @@ button:hover {
   width: 100%;
   border-radius: 0px;
   padding: 5px;
-  font-family: "minecraft", sans-serif;
+  font-family: "Play", sans-serif;
 }
 
 .audio-player {
@@ -201,7 +201,7 @@ input[type="range"]::-moz-range-thumb {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 35px;
+  font-size: 40px;
 }
 
 #volume-control-container {
@@ -380,16 +380,16 @@ img:hover {
 @media screen and (max-width: 999px) {
   body {
     margin: 0 auto;
-    font-family: "minecraft", sans-serif;
+    height: 100%;
   }
 
   .main {
-    width: 90% !important;
-    padding: 30px;
+    width: 80% !important;
+    padding: 10px;
   }
 
   .time-container {
-    font-size: 21px;
+    font-size: 28px;
   }
 
   .controls-buttons {
@@ -401,7 +401,7 @@ img:hover {
   }
 
   #current-track {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .modal {
@@ -495,7 +495,6 @@ img:hover {
 
   #cover-image-container img {
     width: 100%;
-    max-width: 400px;
     border-radius: 10px;
     transition: transform 0.3s ease;
   }
@@ -505,18 +504,18 @@ img:hover {
   }
 
   #prev-track {
-    width: 25%;
+    width: 10%;
     text-align: right;
   }
 
   #cover-image-container {
-    width: 50%;
+    width: 80%;
     text-align: center;
   }
 
   #cover-title {
     margin-top: 2px;
-    font-size: 16px;
+    font-size: 15px;
     height: 60px;
     overflow: hidden;
     display: flex;
@@ -528,7 +527,38 @@ img:hover {
   }
 
   #next-track {
-    width: 25%;
+    width: 10%;
     text-align: left;
+  }
+
+  .controls img {
+    width: 42px;
+  }
+
+  .header-int img {
+    height: 32px;
+  }
+
+  #cover-container {
+    gap: 20px;
+  }
+
+  #cover-container img {
+    width: 100% !important;
+    max-width: 40px !important;
+  }
+
+  #cover-image-container img {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  #cover-container #cover-play {
+    width: 100% !important;
+    max-width: 40px !important;
+  }
+
+  .controls-buttons-right {
+    width: 92px !important;
   }
 }
