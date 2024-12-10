@@ -16,12 +16,16 @@ const currentTimeDisplay = document.getElementById("current-time");
 const totalTimeDisplay = document.getElementById("total-time");
 const playlistContainer = document.getElementById("playlist-container");
 const playlistButton = document.getElementById("playlist-button");
+const lyricsContainer = document.getElementById("lyrics-container");
+const lyricsButton = document.getElementById("lyrics-button");
 const coverContainer = document.getElementById("cover-container");
 const coverImageContainer = document.getElementById("cover-image-container");
 const coverButton = document.getElementById("cover-button");
 const currentTrack = document.getElementById("current-track");
 const nextTrack = document.getElementById("next-track");
 const prevTrack = document.getElementById("prev-track");
+const coverPlay = document.getElementById("cover-play");
+const playTrack = document.getElementById("play-track");
 const style = document.getElementById("style").value;
 
 let currentTrackIndex = 0;
@@ -36,20 +40,26 @@ function isMobile() {
   );
 }
 
-playButton.addEventListener("click", () => {
-  audioPlayer.play();
-  isPlaying = true;
-});
+if (playButton) {
+  playButton.addEventListener("click", () => {
+    audioPlayer.play();
+    isPlaying = true;
+  });
+}
 
-pauseButton.addEventListener("click", () => {
-  audioPlayer.pause();
-  isPlaying = false;
-});
+if (pauseButton) {
+  pauseButton.addEventListener("click", () => {
+    audioPlayer.pause();
+    isPlaying = false;
+  });
+}
 
-stopButton.addEventListener("click", () => {
-  audioPlayer.pause();
-  isPlaying = false;
-});
+if (stopButton) {
+  stopButton.addEventListener("click", () => {
+    audioPlayer.pause();
+    isPlaying = false;
+  });
+}
 
 infoControl.addEventListener("click", () => {
   overlay.style.display = "flex";
@@ -126,8 +136,8 @@ async function loadPlaylist() {
         track.style.color = colorSecondary;
         currentTrackIndex = index;
         isPlaying = true;
-        loadCover();
-        showCover();
+        coverPlay.src = "img/pause3.png";
+        loadInfo();
 
         const titleElement = track.querySelector(
           ".playlist-content .playlist-title"
@@ -155,7 +165,21 @@ async function loadPlaylist() {
   }
 }
 
-async function loadCover() {
+if (playTrack) {
+  playTrack.addEventListener("click", () => {
+    if (isPlaying) {
+      audioPlayer.pause();
+      isPlaying = false;
+      coverPlay.src = "img/play3.png";
+    } else {
+      audioPlayer.play();
+      isPlaying = true;
+      coverPlay.src = "img/pause3.png";
+    }
+  });
+}
+
+async function loadInfo() {
   try {
     const playlistResponse = await fetch("playlist.json");
     const playlist = await playlistResponse.json();
@@ -172,47 +196,47 @@ async function loadCover() {
       }
 
       const title = currentTrackData.title;
-      coverImageContainer.innerHTML = `<img src="${coverImage}" alt="Cover" class="track-cover"  id="cover-img"/><div id="cover-title">${title}</div><img src="${playButton.src}" id="cover-play">`;
-    }
-
-    const coverPlay = document.getElementById("cover-play");
-
-    coverPlay.addEventListener("click", () => {
-      if (isPlaying) {
-        audioPlayer.pause();
-        isPlaying = false;
-        coverPlay.src = pauseButton.src;
+      const lyrics = currentTrackData.lyrics;
+      coverImageContainer.innerHTML = `<img src="${coverImage}" alt="Cover" class="track-cover"  id="cover-img"/><div id="cover-title">${title}</div>`;
+      if (lyrics) {
+        lyricsContainer.innerHTML = `<b>${title}</b><br /><br />${lyrics}`;
       } else {
-        audioPlayer.play();
-        isPlaying = true;
-        coverPlay.src = playButton.src;
+        lyricsContainer.innerHTML = `<b>${title}</b>`;
       }
-    });
+    }
   } catch (error) {
     console.error("Error loading cover:", error);
   }
 }
 
+function showPlaylist() {
+  playlistContainer.style.display = "block";
+  coverContainer.style.display = "none";
+  lyricsContainer.style.display = "none";
+}
+
 function showCover() {
   playlistContainer.style.display = "none";
   coverContainer.style.display = "flex";
+  lyricsContainer.style.display = "none";
 }
 
-function hideCover() {
-  playlistContainer.style.display = "block";
+function showLyrics() {
+  playlistContainer.style.display = "none";
   coverContainer.style.display = "none";
+  lyricsContainer.style.display = "block";
 }
 
 nextTrack.addEventListener("click", () => {
   currentTrackIndex = (currentTrackIndex + 1) % tracks.length;
   tracks[currentTrackIndex].click();
-  loadCover();
+  loadInfo();
 });
 
 prevTrack.addEventListener("click", () => {
   currentTrackIndex = (currentTrackIndex - 1 + tracks.length) % tracks.length;
   tracks[currentTrackIndex].click();
-  loadCover();
+  loadInfo();
 });
 
 audioPlayer.addEventListener("ended", () => {
@@ -253,14 +277,17 @@ progressContainer.addEventListener("click", (event) => {
 });
 
 playlistButton.addEventListener("click", (event) => {
-  hideCover();
+  showPlaylist();
 });
 
 coverButton.addEventListener("click", (event) => {
   showCover();
 });
 
+lyricsButton.addEventListener("click", (event) => {
+  showLyrics();
+});
+
 loadPlaylist().then(() => {
-  loadCover().then(() => {
-  });
+  loadInfo().then(() => {});
 });

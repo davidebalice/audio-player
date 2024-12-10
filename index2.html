@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Audio player - davidebalice.dev</title>
-    <link rel="stylesheet" type="text/css" href="style2.css?d=10" />
+    <link rel="stylesheet" type="text/css" href="style2.css?d=11" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
@@ -27,7 +27,7 @@
           class="audio-player"
           style="display: none"
         >
-          <source src="audio/Rainy day.mp3" type="audio/mpeg" />
+          <source src="audio/davidebalice.dev.mp3" type="audio/mpeg" />
         </audio>
         <div class="controls">
           <div class="controls-buttons">
@@ -62,7 +62,7 @@
         </div>
         <div class="time-container">
           <div id="current-time">0:00</div>
-          <div id="current-track"></div>
+          <div id="current-track">Davidebalice.dev [lyrics]</div>
           <div id="total-time">0:00</div>
         </div>
       </div>
@@ -76,6 +76,10 @@
           <img src="img/cover.png" class="pixelate" />
           cover
         </button>
+        <button id="lyrics-button">
+          <img src="img/lyrics.png" class="pixelate" />
+          lyrics
+        </button>
       </div>
       <div id="playlist-container"></div>
       <div id="cover-container">
@@ -83,6 +87,7 @@
         <div id="cover-image-container"></div>
         <div id="next-track"><img src="img/next.png" /></div>
       </div>
+      <div id="lyrics-container"></div>
 
       <div class="overlay" id="overlay">
         <div class="modal">
