@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Play";
-  src: url("font/play.ttf") format("truetype");
+  src: url("font/Play.ttf") format("truetype");
 }
 
 @font-face {
@@ -60,7 +60,7 @@ button:hover {
 .header-int {
   width: 100%;
   height: 100%;
-  max-width: 1000px;
+  max-width: 740px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -68,7 +68,7 @@ button:hover {
 }
 
 .header-int img {
-  height: 44px;
+  height: 40px;
 }
 
 .header-int div {
@@ -103,8 +103,13 @@ button:hover {
   font-family: "minecraft";
 }
 
+.style2 {
+  color: #222;
+  font-size: 11px;
+}
+
 .main {
-  max-width: 1000px;
+  max-width: 740px;
   padding: 40px;
   margin: 0 auto;
 }
@@ -156,6 +161,10 @@ button:hover {
   gap: 10px;
 }
 
+.controls-buttons img {
+  width: 35px;
+}
+
 .progress {
   height: 8px;
   background-color: #868686;
@@ -174,6 +183,7 @@ button:hover {
   margin-top: 10px;
   width: 120px;
   overflow: hidden;
+  font-size: 25px;
 }
 
 #total-time {
@@ -286,7 +296,7 @@ img:hover {
   list-style: none;
   counter-reset: list-counter;
   padding: 0;
-  font-size: 25px;
+  font-size: 18px;
   padding: 0;
   margin: 0;
   margin-top: 50px;
@@ -333,7 +343,7 @@ img:hover {
 }
 
 #current-track {
-  font-size: 30px;
+  font-size: 25px;
   text-align: center;
   margin-bottom: 40px;
 }
@@ -358,11 +368,10 @@ img:hover {
 
 #cover-container {
   display: none;
-  width: 100%;
   flex-direction: row;
   gap: 30px;
   margin: 0 auto;
-  padding-top: 30px;
+  padding: 30px 0;
   align-items: center;
   justify-content: center;
 }
@@ -374,9 +383,10 @@ img:hover {
 
 #cover-image-container img {
   width: 100%;
-  max-width: 300px;
+  max-width: 400px;
   border-radius: 10px;
   transition: transform 0.3s ease;
+  pointer-events: none;
 }
 
 #lyrics-container {
@@ -398,16 +408,16 @@ img:hover {
 
 #prev-track img,
 #next-track img {
-  width: 35px;
+  width: 28px;
 }
 
 #cover-image-container {
-  width: 30%;
+  width: 40%;
   text-align: center;
 }
 
 #cover-title {
-  font-size: 20px;
+  font-size: 18px;
   height: 70px;
   overflow: hidden;
   display: flex;
@@ -450,7 +460,8 @@ img:hover {
 }
 
 #volume-button {
-  width: 35px;
+  width: 22px;
+  margin-top: 2px;
 }
 
 @media screen and (max-width: 999px) {
@@ -466,7 +477,7 @@ img:hover {
 
   .time-container {
     font-size: 28px;
-    gap: 20px;
+    gap: 14px;
   }
 
   .controls-buttons {
@@ -628,7 +639,7 @@ img:hover {
   }
 
   .header-int img {
-    height: 32px;
+    height: 30px;
   }
 
   #cover-container {

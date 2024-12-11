@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Play";
-  src: url("font/play.ttf") format("truetype");
+  src: url("font/Play.ttf") format("truetype");
 }
 
 @font-face {
@@ -36,7 +36,7 @@ body {
 .header-int {
   width: 100%;
   height: 100%;
-  max-width: 1000px;
+  max-width: 740px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -44,7 +44,7 @@ body {
 }
 
 .header-int img {
-  height: 44px;
+  height: 40px;
 }
 
 .header-int div {
@@ -79,6 +79,11 @@ body {
   font-family: "minecraft";
 }
 
+.style2 {
+  color: #222;
+  font-size: 11px;
+}
+
 button {
   margin-right: 10px;
   font-family: "minecraft", sans-serif;
@@ -103,7 +108,7 @@ button:hover {
 }
 
 .main {
-  max-width: 1000px;
+  max-width: 740px;
   padding: 40px;
   margin: 0 auto;
 }
@@ -172,6 +177,7 @@ button:hover {
 #total-time {
   margin-top: 10px;
   width: 100px;
+  font-size: 16px;
 }
 
 #total-time {
@@ -277,7 +283,7 @@ img:hover {
   list-style: none;
   counter-reset: list-counter;
   padding: 0;
-  font-size: 15px;
+  font-size: 12px;
   padding: 0;
   margin: 0;
   margin-top: 50px;
@@ -311,8 +317,8 @@ img:hover {
 }
 
 #current-track {
-  font-size: 18px;
-  margin-top: 3px;
+  font-size: 13px;
+  margin-top: 5px;
 }
 
 #github-button {
@@ -346,14 +352,14 @@ img:hover {
 
 #cover-image-container img {
   width: 100%;
-  max-width: 300px;
+  max-width: 400px;
   border-radius: 10px;
   transition: transform 0.3s ease;
+  pointer-events: none;
 }
 
 .track-cover {
   min-height: 282px;
-
   filter: grayscale(1);
   transform-origin: center;
 }
@@ -364,13 +370,13 @@ img:hover {
 }
 
 #cover-image-container {
-  width: 30%;
+  width: 40%;
   text-align: center;
 }
 
 #cover-title {
   margin-top: 2px;
-  font-size: 15px;
+  font-size: 12px;
   height: 70px;
   overflow: hidden;
   display: flex;
@@ -397,7 +403,7 @@ img:hover {
 #lyrics-container {
   display: none;
   padding-top: 50px;
-  font-size: 13px;
+  font-size: 11px;
   line-height: 26px;
 }
 
