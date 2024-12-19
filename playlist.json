@@ -1,6 +1,6 @@
 [
   {
-    "title": "Davidebalice.dev [lyrics]",
+    "title": "Davidebalice.dev",
     "url": "https://audio-player.davidebalice.dev/audio/davidebalice.dev.mp3",
     "time": "3:59",
     "cover": "https://audio-player.davidebalice.dev/cover/image_large_82240a38-24f9-4808-a7b0-f2453472a1fe.jpeg",
@@ -8,7 +8,7 @@
     "lyrics": "Welcome to my site, built with care,<br />React and Node, a perfect pair.<br />Every demo, a glimpse of my mind,<br />Projects and skills, all intertwined.<br /><br />From backend flows to frontend glow,<br />A passion for code that continues to grow.<br />3D designs that twist and turn,<br />A world of knowledge where you can learn.<br /><br />[Chorus]<br />This is my space, where dreams ignite,<br />This is my world, where skills unite,<br />A fullstack journey shining bright.<br />Explore the code, the demos, the art,<br />Passion and dreams in every part.  <br /><br />I seek new work, a challenge to take,<br />Building the future with each step I make.<br />Debugging at night, designing by day,<br />Crafting a path, come what may.<br /><br />Interactive pages, smooth and sleek,<br />Node at the core, React so unique.<br />Innovation drives what you’ll see,<br />A window to endless possibility.<br /><br />[Chorus]<br />This is my space, where dreams ignite,<br />This is my world, where skills unite,<br />A fullstack journey shining bright.<br />Explore the code, the demos, the art,<br />Passion and dreams in every part.  <br /><br />Scroll through the site, and you'll discover,<br />A canvas of skills I’m proud to uncover.<br />The future’s ahead, the code is my guide,<br />Hire me now, let’s build side by side!<br /><br />[Chorus]<br />This is my space, where dreams ignite,<br />This is my world, where skills unite,<br />A fullstack journey shining bright.<br />Explore the code, the demos, the art,<br />Passion and dreams in every part.  <br /><br />So if you’re searching for someone who dares,<br />To dream in code and climb the stairs,<br />This is my site, a place to explore,<br />A fullstack developer ready for more!"
   },
   {
-    "title": "Coding session [lyrics]",
+    "title": "Coding session",
     "url": "https://audio-player.davidebalice.dev/audio/Coding session.mp3",
     "time": "3:00",
     "cover": "https://audio-player.davidebalice.dev/cover/image_large_ded4a24c-d7b9-44cf-abd5-4969cae79340.jpeg",
@@ -16,7 +16,7 @@
     "lyrics": "Woke up early, coffee in my hand,<br />Laptop open, time to take a stand.<br />The screen glows bright, the code begins to flow,<br />Lines of logic in a rhythmic show.<br />Fingers dance on the keys, a silent beat,<br />Debugging loops, till the task’s complete.<br /><br />(Chorus)<br />Oh, it's the coder’s life, with its up and down,<br />I would like to be a best coder in town.<br />One more commit, one more try,<br />In this world of bits, I’m ready to fight.<br /><br />Syntax errors, a never-ending tale,<br />Variables lost, functions start to fail.<br />Coding until midnight hour,<br />Fueled by passion, code’s my power.<br />From the first “Hello, World!” to a complex maze,<br />my keyboard today is ablaze.<br /><br />Eyes red and tired, But I’m not stopping,<br />I’m too inspired.<br />Code compiled, a smile on my face,<br />In this journey, I've found my place.<br />Close the laptop, breathe in deep,<br />Rest for now, tomorrow’s leap.<br />In this world, where zeros meet ones,<br />The coding song forever runs.<br />"
   },
   {
-    "title": "Firewall [lyrics]",
+    "title": "Firewall",
     "url": "https://audio-player.davidebalice.dev/audio/Firewall.mp3",
     "time": "3:45",
     "cover": "https://audio-player.davidebalice.dev/cover/image_large_12d71c7f-61e4-40e0-8a44-651f8761294b.jpeg",
@@ -25,7 +25,7 @@
   },
 
   {
-    "title": "Fullstack day [lyrics]",
+    "title": "Fullstack day",
     "url": "https://audio-player.davidebalice.dev/audio/Fullstack day.mp3",
     "time": "3:06",
     "cover": "https://audio-player.davidebalice.dev/cover/image_large_bac87163-698d-46c7-9138-8c2aa95d2779.jpeg",
@@ -38,11 +38,12 @@
     "url": "https://audio-player.davidebalice.dev/audio/Error 404.mp3",
     "time": "2:28",
     "cover": "https://audio-player.davidebalice.dev/cover/image_large_4fcabbd3-ad28-4b17-9815-d58880813ed6.jpeg",
-    "thumb": "https://audio-player.davidebalice.dev/cover/image_large_4fcabbd3-ad28-4b17-9815-d58880813ed6-thumb.jpg"
+    "thumb": "https://audio-player.davidebalice.dev/cover/image_large_4fcabbd3-ad28-4b17-9815-d58880813ed6-thumb.jpg",
+    "lyrics": "instrumental"
   },
 
   {
-    "title": "Status 200 OK [lyrics]",
+    "title": "Status 200 OK",
     "url": "https://audio-player.davidebalice.dev/audio/Status 200 OK.mp3",
     "time": "3:33",
     "cover": "https://audio-player.davidebalice.dev/cover/image_large_74852759-8e9d-48b6-93b9-dd45066ed772.jpeg",
@@ -55,11 +56,12 @@
     "url": "https://audio-player.davidebalice.dev/audio/Digital chaos.mp3",
     "time": "4:00",
     "cover": "https://audio-player.davidebalice.dev/cover/image_large_97ad4270-ddf8-436e-9f61-b8aa7f99f462.jpeg",
-    "thumb": "https://audio-player.davidebalice.dev/cover/image_large_97ad4270-ddf8-436e-9f61-b8aa7f99f462-thumb.jpg"
+    "thumb": "https://audio-player.davidebalice.dev/cover/image_large_97ad4270-ddf8-436e-9f61-b8aa7f99f462-thumb.jpg",
+    "lyrics": "instrumental"
   },
 
   {
-    "title": "Network [lyrics]",
+    "title": "Network",
     "url": "https://audio-player.davidebalice.dev/audio/Network.mp3",
     "time": "3:25",
     "cover": "https://audio-player.davidebalice.dev/cover/image_large_83b7ab43-37c5-4832-b8d2-944b8a6eb021.jpeg",
@@ -72,27 +74,31 @@
     "url": "https://audio-player.davidebalice.dev/audio/Digital dominance.mp3",
     "time": "2:51",
     "cover": "cover/image_large_2d1e6e36-563b-4eda-8152-3fa7b6be6fe2.jpeg",
-    "thumb": "cover/image_large_2d1e6e36-563b-4eda-8152-3fa7b6be6fe2-thumb.jpg"
+    "thumb": "cover/image_large_2d1e6e36-563b-4eda-8152-3fa7b6be6fe2-thumb.jpg",
+    "lyrics": "instrumental"
   },
   {
     "title": "Electric sunrise",
     "url": "https://audio-player.davidebalice.dev/audio/Electric sunrise.mp3",
     "time": "3:08",
     "cover": "https://audio-player.davidebalice.dev/cover/image_large_7bce272f-968f-45ed-ae42-744a95a98519.jpeg",
-    "thumb": "https://audio-player.davidebalice.dev/cover/image_large_7bce272f-968f-45ed-ae42-744a95a98519-thumb.jpg"
+    "thumb": "https://audio-player.davidebalice.dev/cover/image_large_7bce272f-968f-45ed-ae42-744a95a98519-thumb.jpg",
+    "lyrics": "instrumental"
   },
   {
     "title": "Stack overflow",
     "url": "https://audio-player.davidebalice.dev/audio/Stack overflow.mp3",
     "time": "4:00",
     "cover": "https://audio-player.davidebalice.dev/cover/image_large_f8f7fbff-318a-4523-974e-6b7c01b996b5.jpeg",
-    "thumb": "https://audio-player.davidebalice.dev/cover/image_large_f8f7fbff-318a-4523-974e-6b7c01b996b5-thumb.jpg"
+    "thumb": "https://audio-player.davidebalice.dev/cover/image_large_f8f7fbff-318a-4523-974e-6b7c01b996b5-thumb.jpg",
+    "lyrics": "instrumental"
   },
   {
     "title": "Unleashed idea",
     "url": "https://audio-player.davidebalice.dev/audio/Unleashed idea.mp3",
     "time": "2:19",
     "cover": "https://audio-player.davidebalice.dev/cover/image_large_12ebd3d4-53ee-4cec-982f-d0b79ebe9f38.jpeg",
-    "thumb": "https://audio-player.davidebalice.dev/cover/image_large_12ebd3d4-53ee-4cec-982f-d0b79ebe9f38-thumb.jpg"
+    "thumb": "https://audio-player.davidebalice.dev/cover/image_large_12ebd3d4-53ee-4cec-982f-d0b79ebe9f38-thumb.jpg",
+    "lyrics": "instrumental"
   }
 ]

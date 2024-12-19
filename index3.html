@@ -6,19 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
-    <div class="header">
-      <div class="header-int">
-        <img src="img/logo.png" />
-        <div>
-          <a href="index.html"
-            ><img src="img/style1.jpg" /><span>style 1</span></a
-          >
-          <a href="index2.html"
-            ><img src="img/style2.jpg" /><span class="style2">style 2</span></a
-          >
-        </div>
-      </div>
-    </div>
     <div class="main">
       <div class="audio-player-container">
         <audio
@@ -29,7 +16,8 @@
         >
           <source src="audio/davidebalice.dev.mp3" type="audio/mpeg" />
         </audio>
-        <div class="controls">
+
+        <div class="controls" style="display: none">
           <div class="controls-buttons">
             <img src="img/volume4.png" id="volume-button" />
           </div>
@@ -54,7 +42,7 @@
             value="1"
           />
         </div>
-
+        <br />
         <div id="current-track">Davidebalice.dev</div>
         <div class="progress" id="progress">
           <div class="progress-bar" id="progress-bar"></div>
